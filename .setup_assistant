@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: grasp_dope
+    relative_path: urdf/yaskawa_wth_gripper.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/motoman_sia5d_gripper.srdf
+  CONFIG:
+    author_name: Sara Federico
+    author_email: sara.federico99@hotmail.it
+    generated_timestamp: 1670328540
