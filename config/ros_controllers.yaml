@@ -1,0 +1,28 @@
+hardware_interface:
+  joints:
+      - joint_s
+      - joint_l
+      - joint_e
+      - joint_u
+      - joint_r
+      - joint_b
+      - joint_t
+
+# Publish all joint states
+# Creates the /joint_states topic necessary in ROS
+# joint_state_controller:
+#   type: joint_state_controller/JointStateController
+#   publish_rate: 50
+
+controller_list:
+  - name: "motoman"
+    action_ns: joint_trajectory_action
+    type: FollowJointTrajectory
+    joints: 
+      - joint_s
+      - joint_l
+      - joint_e
+      - joint_u
+      - joint_r
+      - joint_b
+      - joint_t
