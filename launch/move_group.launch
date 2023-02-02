@@ -3,13 +3,12 @@
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
-  <arg     if="$(arg debug)" name="launch_prefix"
-           value="gdb -x $(dirname)/gdb_settings.gdb --ex run --args" />
+  <arg if="$(arg debug)" name="launch_prefix" value="gdb -x $(dirname)/gdb_settings.gdb --ex run --args" />
 
   <!-- Verbose Mode Option -->
   <arg name="info" default="$(arg debug)" />
   <arg unless="$(arg info)" name="command_args" value="" />
-  <arg     if="$(arg info)" name="command_args" value="--debug" />
+  <arg if="$(arg info)" name="command_args" value="--debug" />
 
   <!-- move_group settings -->
   <arg name="pipeline" default="ompl" />
@@ -62,8 +61,7 @@
     </include>
 
     <!-- Support custom planning pipeline -->
-    <include if="$(eval arg('pipeline') not in ['ompl', 'chomp', 'pilz_industrial_motion_planner'])"
-             file="$(dirname)/planning_pipeline.launch.xml">
+    <include if="$(eval arg('pipeline') not in ['ompl', 'chomp', 'pilz_industrial_motion_planner'])" file="$(dirname)/planning_pipeline.launch.xml">
       <arg name="pipeline" value="$(arg pipeline)" />
     </include>
   </group>
@@ -101,7 +99,7 @@
     <param name="planning_scene_monitor/publish_state_updates" value="$(arg publish_monitored_planning_scene)" />
     <param name="planning_scene_monitor/publish_transforms_updates" value="$(arg publish_monitored_planning_scene)" />
 
-    <remap from="joint_states" to="motoman/joint_states"/> 
+    <remap from="joint_states" to="motoman/joint_states"/>
   </node>
 
 </launch>
