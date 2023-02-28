@@ -131,4 +131,6 @@
     <disable_collisions link1="link_u" link2="tactile_1" reason="Never"/>
     <disable_collisions link1="link_u" link2="tactile_2" reason="Never"/>
     <disable_collisions link1="tactile_1" link2="tactile_2" reason="Never"/>
+    <disable_collisions link1="tactile_1" link2="push_extension" reason="Never"/>
+    <disable_collisions link1="tactile_2" link2="push_extension" reason="Adjacent"/>
 </robot>
