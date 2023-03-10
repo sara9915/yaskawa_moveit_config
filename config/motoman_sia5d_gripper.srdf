@@ -12,6 +12,9 @@
     <group name="yaskawa_arm">
         <chain base_link="base_link" tip_link="tool0"/>
     </group>
+    <group name="yaskawa_push">
+        <chain base_link="base_link" tip_link="push_frame"/>
+    </group>
     <group name="gripper_right">
         <chain base_link="base_link_gripper" tip_link="tactile_1"/>
     </group>

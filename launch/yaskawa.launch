@@ -26,7 +26,7 @@
 
     <!-- Given the published joint states, publish tf for the robot links -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen">
-        <remap from="joint_states" to="motoman/joint_states"/>
+        <remap from="joint_states" to="full_joint_states"/>
     </node>
 
     <include file="$(dirname)/motoman_sia5d_gripper_moveit_controller_manager.launch"/>
