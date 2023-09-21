@@ -416,6 +416,8 @@ Visualization Manager:
           Value: false
         link_u:
           Value: false
+        push_frame:
+          Value: false
         tactile_1:
           Value: false
         tactile_2:
@@ -455,6 +457,8 @@ Visualization Manager:
                                     camera_depth_optical_frame:
                                       {}
                             end_effector_tool0:
+                              {}
+                            push_frame:
                               {}
       Update Interval: 0
       Value: true
